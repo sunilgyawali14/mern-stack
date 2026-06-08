@@ -18,19 +18,40 @@ const { json } = require("stream/consumers");
 
 // .........................................................................
 // providing the json as a response 
+// const server= http.Server((req, res)=>{
+//     res.end(
+//         JSON.stringify({
+//             name: "Sunil Gyawali",
+//             learn :"AI powered MERN-STACK"
+//         }
+//         ))})
 
-const server= http.Server((req, res)=>{
-    res.end(
-        JSON.stringify({
-            name: "Sunil Gyawali",
-            learn :"AI powered MERN-STACK"
-        }
+//.............ROUTIUNG................
+const server=http.createServer((req,res)=>{
+    if(req.url=== '/'){
+        res.end("This is the home page")
+    }
+    else if(req.url==='/about'){
+        res.end("This is about Page")
+    }
+    else if(req.url==='/COntact'){
+        res.end("This is contact  Page")
+    } 
+    else if(req.url==='/project'){
+        res.end("This is project Page")
+    }
+     else if(req.url==='/services'){
+        res.end("This is services Page")
+    }
 
-        )
-    )
+      else if(req.url==='/getintouch'){
+        res.end("This is get in touch  Page")
+    }
+    
+    else {
+        res.end("404 - not found")
+    }
 })
-
-
-server.listen(8002, () => {
-  console.log("the server is running  port=8002 ");
+server.listen(8004, () => {
+  console.log("the server is running  port=8004 ");
 });
