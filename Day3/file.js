@@ -12,7 +12,11 @@ const fs=require('fs')
 // console.log('successfully crated a synchronous file');
 
 // Asynchronous way of reading file ;
-fs.readFile('Readme.txt','utf-8',(err, data)=>{
-    if(err) throw err
-    console.log(data);
-})
+// fs.readFile('Readme.txt','utf-8',(err, data)=>{
+//     if(err) throw err
+//     console.log(data);
+// })
+
+// TODO : synchronous way 
+const data= fs.readFileSync('syncronous.txt','utf-8' )
+console.log(data)
