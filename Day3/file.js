@@ -7,5 +7,7 @@ fs.writeFile('Readme.txt','This is the file created by server', (err)=>{
     console.log('The file is created sucessfully "Asynchronous" ');
 }) 
 
-
+// creating a file using fs -> synchronous way 
+fs.writeFileSync('syncronous.txt','syncronous way of creating file')
+console.log('successfully crated a synchronous file');
 
