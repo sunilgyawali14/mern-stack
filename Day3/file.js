@@ -29,5 +29,14 @@ const fs=require('fs')
 // })
 
 // updating the file by synchronous
- fs.appendFileSync('syncronous.txt','. \n synchronous way of updating file','utf-8')
-console.log('the data is updated ');
+//  fs.appendFileSync('syncronous.txt','. \n synchronous way of updating file','utf-8')
+// console.log('the data is updated ');
+
+// DELETEING THE FILE => unlink "Asynchronous way "
+// fs.unlink('syncronous.txt',(err)=>{
+//     if (err) throw err 
+//     console.log('The file is deleted .... ');
+// })
+
+// // deleteing the file ==> 'synchronous'
+// fs.unlinkSync('Readme.txt')
