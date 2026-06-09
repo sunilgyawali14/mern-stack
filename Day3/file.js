@@ -18,5 +18,12 @@ const fs=require('fs')
 // })
 
 // TODO : synchronous way 
-const data= fs.readFileSync('syncronous.txt','utf-8' )
-console.log(data)
+// const data= fs.readFileSync('syncronous.txt','utf-8' )
+// console.log(data)
+
+
+// UPDATE A FILE 
+fs.appendFile('Readme.txt','. The data is now updated by the appendFile.',(err)=>{
+    if(err) throw err
+    console.log('The file is updated successfully');
+})
