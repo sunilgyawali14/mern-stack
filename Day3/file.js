@@ -22,8 +22,12 @@ const fs=require('fs')
 // console.log(data)
 
 
-// UPDATE A FILE 
-fs.appendFile('Readme.txt','. The data is now updated by the appendFile.',(err)=>{
-    if(err) throw err
-    console.log('The file is updated successfully');
-})
+// UPDATE A FILE   => asynchronous way 
+// fs.appendFile('Readme.txt','. The data is now updated by the appendFile.',(err)=>{
+//     if(err) throw err
+//     console.log('The file is updated successfully');
+// })
+
+// updating the file by synchronous
+ fs.appendFileSync('syncronous.txt','. \n synchronous way of updating file','utf-8')
+console.log('the data is updated ');

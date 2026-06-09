@@ -1,1 +1,2 @@
-syncronous way of creating file
+syncronous way of creating file. 
+ synchronous way of updating file
