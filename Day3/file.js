@@ -49,7 +49,10 @@ const fs=require('fs');
 //     console.log('The file is created successfully ');
 // })
 // RENAME 
-fs.rename('Readme.txt','NewFile.md',(err)=>{
-    if(err) throw err
-    console.log('The random file name is renamed');
-})
+// fs.rename('Readme.txt','NewFile.md',(err)=>{
+//     if(err) throw err
+//     console.log('The random file name is renamed');
+// })
+
+// RENAME in synchronous way
+fs.renameSync('script.js','script.txt')
