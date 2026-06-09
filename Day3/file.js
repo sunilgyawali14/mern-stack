@@ -1,5 +1,6 @@
 // creating file from server using the built in module fs
-const fs=require('fs')
+const fs=require('fs');
+
 
 // // creating a file by using fs => Asynchronous way
 // fs.writeFile('Readme.txt','This is the file created by server', (err)=>{
@@ -40,3 +41,15 @@ const fs=require('fs')
 
 // // deleteing the file ==> 'synchronous'
 // fs.unlinkSync('Readme.txt')
+
+//RENAME of file 
+// step 1: create a random file 
+// fs.writeFile('Readme.txt','This is the random file name', (err)=>{
+//     if (err) throw err
+//     console.log('The file is created successfully ');
+// })
+// RENAME 
+fs.rename('Readme.txt','NewFile.md',(err)=>{
+    if(err) throw err
+    console.log('The random file name is renamed');
+})
